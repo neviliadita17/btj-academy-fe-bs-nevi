@@ -22,6 +22,18 @@ body {
     font-weight: lighter;
 }
 
+.nav-link {
+    color: #ff725c;
+}
+
+.nav-link:hover {
+    color: #375a64;
+}
+
+.nav-item.active .nav-link {
+    color: #375a64;
+}
+
 .btn-login{
     background-color: #375a64;
     color: white;
