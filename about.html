@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTJ Academy</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-custom d-flex align-items-center p-3 min-vh-100" style="background: rgb(255,114,92); background: linear-gradient(317deg, rgba(255,114,92,1) 36%, rgba(55,90,100,1) 36%); overflow: hidden;">
+        <!-- Kontainer dengan Bootstrap -->
+        <div class="container rounded-4 g-0 bg-white" style="max-height: 90vh; overflow-y: auto;">
+            <!-- Header -->
+            <header>
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg rounded-4 navbar-light bg-white">
+                    <div class="container-fluid">
+                        <!-- Logo dan Judul di Sebelah Kiri -->
+                        <a class="navbar-brand  ms-3" href="#">
+                            <img id="logoImage" src="src/6333043.jpg" alt="logo" class="img-fluid" style="width: 75px;">
+                            <span class="h2-text-color">Welcome</span>
+                        </a>
+                
+                        <!-- Tombol Toggle untuk Layar Kecil -->
+                        <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon" ></span>
+                        </button>
+                
+                        <!-- Menu di Sebelah Kanan -->
+                        <div class="collapse navbar-collapse me-4" id="navbarNav">
+                            <ul class="navbar-nav ms-auto text-end">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="home.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">About</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <section class="bio-section">
+                <div class="container bio" style="background-image: url('src/bg-about-me.png'); background-size:cover; background-position: center;">
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <div class="container d-flex justify-content-center align-items-center">
+                                <div class="profile-picture position-relative overflow-hidden">
+                                    <div class="position-absolute top-50 start-50 translate-middle border rounded-5 mt-5" style="width: 100%; height: 65%; background-color: white; z-index: 1; top: 25%;"></div>
+                                    <img id="photo" src="src/foto__1___1_-removebg-preview.png" class="position-relative img-fluid rounded-5" alt="Profile Image" style="z-index: 2; width: 350px; height: auto;">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 d-flex align-items-center justify-content-center">
+                            <div class="card position-relative balloon-card shadow p-5 rounded-4">
+                                <h2 class="h2-text-color">Hello Everyone, I'm Nevi</h2>
+                                <p class="text-muted">Focus on Front End Developer @BTJ Academy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-me-section container mt-5">
+                <div class="container about col-9 text-center">
+                    <h3 class="h3-text-color">About Myself</h3>
+                    <p class="text-muted">
+                        Excited to music and traveling. I think the desire to explore,
+                        feel beauty, and seek happiness may be the main driving force behind
+                        human interest in music and traveling. Each individual may have unique
+                        reasons for enjoying these two things according to their personal
+                        preferences and needs.
+                    </p>
+                </div>
+
+                <div class="container get-in-touch-icons col-9 text-center mt-3">
+                    <h4 class="h4-text-color">Get In Touch</h4>
+                    <div class="get-in-touch-icons">
+                        <a href="https://www.linkedin.com/in/neviliadita/" target="_blank" style="font-size: 32px; color:  #375a64;">
+                            <i class='bx bxl-linkedin-square bx-tada'></i></i></a>
+                        <a href="neviliadita1@gmail.com" target="_blank" style="font-size: 32px; color: #375a64;">
+                            <i class='bx bxs-envelope bx-tada'></i></a>
+                    </div>
+                </div>
+                
+                <div class="container portofolio text-center col-9 p-3">
+                    <p class="h4-text-color">- I also have experience in several fields such as -</p>
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <i class='bx bxl-figma' style='font-size: 5rem; color: #ff725c;'></i>
+                                    <h5 class="card-title h4-text-color">UI/UX</h5>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="col-md-4 mb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <i class='bx bx-code-block' style='font-size: 5rem; color: #ff725c;'></i>
+                                    <h5 class="card-title h4-text-color">Front End</h5>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="col-md-4 mb-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <i class='bx bxl-python' style='font-size: 5rem; color: #ff725c;'></i>
+                                    <h5 class="card-title h4-text-color">Machine Learning</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="edu-work-section container mt-5">
+                <div class="container edu-work col-9">
+                    <h3 class="text-center h3-text-color">Edu-Work Experience</h3>
+
+                    <div class="row mt-4">
+                        <!-- Kolom Pendidikan (Education) -->
+                        
+                        <div class="col-md-6">
+                            <h5 class="text-center text-muted">Education</h5>
+                            <div class="content education">
+                                <!-- <h4>Education</h4> -->
+                            <!-- Tambahkan lebih banyak konten sesuai kebutuhan -->
+                                <div class="accordion accordion-flush" id="accordionFlushExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingOneEducation">
+                                            <button class="accordion-button collapsed h4-text-color" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOneEducation" aria-expanded="false" aria-controls="flush-collapseOneEducation">
+                                            Bachelor's Degree
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseOneEducation" class="accordion-collapse collapse" aria-labelledby="flush-headingOneEducation" data-bs-parent="#accordionFlushExampleEducation">
+                                        <div class="accordion-body p-text-color">Information Engineering - Kun Shan University, Taiwan (2021 - 2023)</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingTwoEducation">
+                                            <button class="accordion-button collapsed h4-text-color" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwoEducation" aria-expanded="false" aria-controls="flush-collapseTwoEducation">
+                                                Associate's Degree
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseTwoEducation" class="accordion-collapse collapse" aria-labelledby="flush-headingTwoEducation" data-bs-parent="#accordionFlushExampleEducation">
+                                            <div class="accordion-body p-text-color">Information System - Brawijaya University (2018 - 2021)</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Kolom Pekerjaan (Work) -->
+                        <div class="col-md-6">
+                            <h5 class="text-center text-muted">Work Experience</h5>
+                            <div class="content work">
+                                <!-- <h4>Work Experience</h4> -->
+                                <!-- Tambahkan lebih banyak konten sesuai kebutuhan -->
+                                <div class="accordion accordion-flush" id="accordionFlushExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingOneWork">
+                                            <button class="accordion-button collapsed h4-text-color" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOneWork" aria-expanded="false" aria-controls="flush-collapseOneWork">
+                                                Internship
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseOneWork" class="accordion-collapse collapse" aria-labelledby="flush-headingOneWork" data-bs-parent="#accordionFlushExampleWork">
+                                            <div class="accordion-body p-text-color">Front End Developer Internship @Profile Image Studio, Malang</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingTwoWork">
+                                            <button class="accordion-button collapsed h4-text-color" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwoWork" aria-expanded="false" aria-controls="flush-collapseTwoWork">
+                                                Assistant Laboratorium
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseTwoWork" class="accordion-collapse collapse" aria-labelledby="flush-headingTwoWork" data-bs-parent="#accordionFlushExampleWork">
+                                            <div class="accordion-body p-text-color">Being a laboratory assistant manager to manage laboratory networks @Kun Shan University's IE Laboratorium</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+                
+            </section>
+
+            <section class="motto-section container mt-5">
+                <div class="container motto col-9 mx-auto text-center">
+                    <h3 class="h3-text-color">My Motto?</h3>
+                    <p class="text-muted">"Do what you love because there are so many reasons to be happy."</p>
+                </div>
+            </section>
+    <!-- 
+            <section class="motto-section container text-center mt-5">
+                <div class="container motto">
+                    <h3>My Motto?</h3>
+                    <p>"Do what you love because there are so many reasons to be happy."</p>
+                </div>
+            </section> -->
+
+            <footer class="bg-white rounded-4 text-muted text-center p-3 ">
+                © 2023 BTJ Academy
+            </footer>
+        </div>
+    </div>
+</body>
+
+
+  
+
+    <!-- Menggunakan Bootstrap JS dan Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var isLoggedIn = false;
+
+            function checkLoginStatus() {
+            if (!isLoggedIn) {
+                alert("You need to login first!");
+                // Gantilah URL sesuai dengan halaman login Anda
+                window.location.href = 'home.html';
+            }
+            }
+
+            // Tautan Home
+            $('.nav-link[href="home.html"]').click(function (event) {
+            checkLoginStatus();
+            event.preventDefault(); // Menghentikan navigasi default
+            });
+
+            // Tautan About
+            $('.nav-link[href="about.html"]').click(function (event) {
+            checkLoginStatus();
+            event.preventDefault(); // Menghentikan navigasi default
+            });
+
+            // Rotation Logo
+            $('#logoImage').click(function () {
+                var logo = $(this);
+
+                logo.addClass('rotate');
+
+                var rotationCount = logo.data('rotationCount') || 0;
+                rotationCount++;
+
+                var rotationAngle = 360 * rotationCount;
+
+                logo.animate({ rotation: rotationAngle }, {
+                    step: function (now, fx) {
+                        logo.css('transform', 'rotate(' + now + 'deg)');
+                    },
+                    duration: 500,
+                    complete: function () {
+                        logo.removeClass('rotate').data('rotationCount', rotationCount);
+                    },
+                    easing: 'linear'
+                });
+            });
+
+            $('#inputUsername5').on('input blur', function () {
+                var username = $(this).val();
+                var errorElement = $('#usernameError');
+
+                errorElement.html(username === "" ? "Field Username!" : ($.trim(username) === "" ? "Username cannot be just spaces!" : ""));
+            });
+
+            $('#inputPassword5').on('input', function () {
+                var password = $(this).val();
+                var hasUppercase = /[A-Z]/.test(password);
+                var hasLowercase = /[a-z]/.test(password);
+                var hasNumber = /\d/.test(password);
+
+                var passwordError = (!hasUppercase ? " 1 Uppercase," : "") +
+                                    (!hasLowercase ? " 1 Lowercase," : "") +
+                                    (!hasNumber ? " 1 Number," : "");
+
+                // Menghapus koma terakhir
+                passwordError = passwordError.slice(0, -1);
+
+                var errorElement = $('#passwordError');
+
+                errorElement.html(password === "" ? "Field Password!" : (password.length < 4 || passwordError !== "" ? "Password must be at least 4 characters with:" + passwordError : ""));
+            });
+
+            
+            $('#form-login').submit(function (event) {
+                event.preventDefault();
+
+                // Reset pesan kesalahan sebelum validasi
+                $('#usernameError, #passwordError').html("");
+
+                // Validasi username
+                var username = $.trim($('#inputUsername5').val());
+                var usernameError = username === "" ? "Field Username!" : ($.trim(username) === "" ? "Username cannot be just spaces!" : "");
+                $('#usernameError').html(usernameError);
+
+                // Validasi password
+                var password = $('#inputPassword5').val();
+                var passwordError = "";
+                if (password === "" || password.length < 4) {
+                    passwordError = "Field Password!";
+                } else {
+                    var hasUppercase = /[A-Z]/.test(password);
+                    var hasLowercase = /[a-z]/.test(password);
+                    var hasNumber = /\d/.test(password);
+                    passwordError = (!hasUppercase ? "1 Uppercase, " : "") +
+                    (!hasLowercase ? "1 Lowercase, " : "") +
+                    (!hasNumber ? "1 Number, " : "");
+                    passwordError = passwordError ? "Password must be at least 4 characters with: " + passwordError.trim() : "";
+                }
+                $('#passwordError').html(passwordError);
+
+                // Fetch API berdasarkan validasi username dan password
+                if (!usernameError && !passwordError) {
+                    $.ajax({
+                    url: 'https://dummyjson.com/auth/login',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        username,
+                        password
+                    }),
+                    success: function (data, xhr) {
+                        console.log("Response status:", xhr.status);
+                        console.log("Data from API:", data);
+
+                        if (data && data.token) {
+                        console.log("Login successful. Redirecting...");
+                        isLoggedIn = true;
+                        window.location.href = 'about.html';
+                        } else {
+                        alert("Login failed. Please try again.");
+                        }
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        console.error("Error connecting to the authentication API:", errorThrown);
+                        alert("Error connecting to the authentication API. Please check your username and password.");
+                    }
+                    });
+                }
+            });
+
+            // $('#form-login').submit(function (event) {
+            //     event.preventDefault();
+
+            //     // Reset pesan kesalahan sebelum validasi
+            //     $('#usernameError, #passwordError').html("");
+
+            //     // Validasi username
+            //     var username = $.trim($('#inputUsername5').val());
+            //     var usernameError = username === "" ? "Field Username!" : ($.trim(username) === "" ? "Username cannot be just spaces!" : "");
+            //     $('#usernameError').html(usernameError);
+
+            //     // Validasi password
+            //     var password = $('#inputPassword5').val();
+            //     var passwordError = "";
+            //     if (password === "" || password.length < 4) {
+            //         passwordError = "Field Password!";
+            //     } else {
+            //         var hasUppercase = /[A-Z]/.test(password);
+            //         var hasLowercase = /[a-z]/.test(password);
+            //         var hasNumber = /\d/.test(password);
+            //         passwordError = (!hasUppercase ? "1 Uppercase, " : "") +
+            //                         (!hasLowercase ? "1 Lowercase, " : "") +
+            //                         (!hasNumber ? "1 Number, " : "");
+            //         passwordError = passwordError ? "Password must be at least 4 characters with: " + passwordError.trim() : "";
+            //     }
+            //     $('#passwordError').html(passwordError);
+
+            //     // Fetch API berdasarkan validasi username dan password
+            //     if (!usernameError && !passwordError) {
+            //         $.ajax({
+            //             url: 'https://dummyjson.com/auth/login',
+            //             method: 'POST',
+            //             contentType: 'application/json',
+            //             data: JSON.stringify({ username, password }),
+            //             success: function (data, xhr) {
+            //                 console.log("Response status:", xhr.status);
+            //                 console.log("Data from API:", data);
+
+            //                 if (data && data.token) {
+            //                     console.log("Login successful. Redirecting...");
+            //                     window.location.href = 'about.html';
+            //                 } else {
+            //                     alert("Login failed. Please try again.");
+            //                 }
+            //             },
+            //             error: function (xhr, textStatus, errorThrown) {
+            //                 console.error("Error connecting to the authentication API:", errorThrown);
+            //                 alert("Error connecting to the authentication API. Please check your username and password.");
+            //             }
+            //         });
+            //     }
+            // });
+
+
+            $('#showPasswordCheckbox').change(function () {
+            var passwordInput = $('#inputPassword5');
+                passwordInput.prop('type', function (_, currentType) {
+                    return currentType === 'password' ? 'text' : 'password';
+                });
+            });
+
+            $('#inputUsername5, #inputPassword5').on('keydown keyup', function (event) {
+                $("#capsLockWarning").css("display", event.originalEvent.getModifierState && event.originalEvent.getModifierState("CapsLock") ? "inline" : "none");
+            });
+
+            $('#photo').click(function () {
+                var currentScale = $(this).css('transform');
+                var newScale = (currentScale === 'none' || currentScale === 'matrix(1, 0, 0, 1, 0, 0)') ? 'scale(1.2)' : 'none';
+
+                $(this).css({
+                    'transition': 'transform 0.3s ease',
+                    'transform': newScale
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

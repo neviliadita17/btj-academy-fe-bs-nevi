@@ -1,0 +1,54 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.h2-text-color{
+    color: #ff725c;
+    font-weight: bold;
+}
+
+.h3-text-color{
+    color: #ff725c;
+    font-weight: bold;
+}
+
+.h4-text-color{
+    color: #375a64;
+    font-weight;
+}
+
+.p-text-color{
+    color: #7d7d87;
+    font-weight: lighter;
+}
+
+.btn-login{
+    background-color: #375a64;
+    color: white;
+    font-weight: lighter;
+}
+
+/* CSS untuk balon chat pada layar lebar */
+.balloon-card::before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 10px 15px 10px 0;
+    border-color: transparent #ffffff transparent transparent;
+    /* top: 15px; */
+    left: -15px;
+}
+
+/* CSS untuk balon chat pada layar mobile */
+@media only screen and (max-width: 767px) {
+    .col-md-6 .balloon-card::before {
+        border-width: 0 15px 15px 15px;
+        border-color: #ffffff transparent transparent transparent; /* Sesuaikan warna border */
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    /* .bio {
+        background-image: url('src/bg-about-me-mobile.png');
+    } */
+}

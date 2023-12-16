@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BTJ Academy</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bg-custom d-flex align-items-center p-3 min-vh-100" style="background: rgb(255,114,92); background: linear-gradient(317deg, rgba(255,114,92,1) 36%, rgba(55,90,100,1) 36%);">
+        <!-- Kontainer dengan Bootstrap -->
+        <div class="container rounded-4 g-0 bg-white" style="max-height: 90vh; overflow-y: auto;">
+            <!-- Header -->
+            <header>
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg rounded-4 navbar-light bg-white">
+                    <div class="container-fluid">
+                        <!-- Logo dan Judul di Sebelah Kiri -->
+                        <a class="navbar-brand  ms-3" href="#">
+                            <img id="logoImage" src="src/6333043.jpg" alt="logo" class="img-fluid" style="width: 75px;">
+                            <span class="h2-text-color">Welcome</span>
+                        </a>
+                
+                        <!-- Tombol Toggle untuk Layar Kecil -->
+                        <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon" ></span>
+                        </button>
+                
+                        <!-- Menu di Sebelah Kanan -->
+                        <div class="collapse navbar-collapse me-4" id="navbarNav">
+                            <ul class="navbar-nav ms-auto text-end">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="home.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">About</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <section class="row login-section p-5">
+                <!-- Kolom Konten Formulir (Card) -->
+                <div class="content-login col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title mt-2 ms-3 h2-text-color">Welcome to Our Landing Page</h2>
+                        <p class="card-text ms-3">Please login to access other features.</p>
+
+                        <!-- Isi formulir Anda di sini -->
+                        <form id="form-login" class="p-3" action="about.html" method="post">
+                            <div class="mb-3">
+                                <label for="inputUsername5" class="form-label">Username</label>
+                                <input type="text" id="inputUsername5" class="form-control" aria-describedby="usernameHelpBlock">
+                                <div id="usernameError" class="text-danger"></div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputPassword5" class="form-label">Password</label>
+                                <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+                                <div id="passwordError" class="text-danger"></div>
+                            </div>
+
+                            <div id="capsLockWarning" class="text-danger" style="display: none;">Caps Lock is ON</div>
+
+                            <div class="mb-3 mt-3 checkBox-password">
+                            <input type="checkbox" class="form-check-input" id="showPasswordCheckbox">
+                            <label class="form-check-label" for="showPasswordCheckbox">Check Password</label>
+                            </div>
+
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-login mt-3" type="submit" value="Login">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                </div>
+        
+                <!-- Kolom Konten Gambar -->
+                <div class="col-md-6 d-flex align-items-center">
+                    <div class="content-img">
+                    <img src="src/6333043.jpg" alt="Image" class="img-fluid rounded">
+                    <p class="mt-3 text-muted text-center">"The only limit to our realization of tomorrow will be our doubts of today." - Franklin D. Roosevelt</p>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="bg-white rounded-4 text-muted text-center p-3 ">
+                © 2023 BTJ Academy
+            </footer>
+        </div>
+    </div>
+
+    <!-- Menggunakan Bootstrap JS dan Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var isLoggedIn = false;
+
+            function checkLoginStatus() {
+            if (!isLoggedIn) {
+                alert("You need to login first!");
+                // Gantilah URL sesuai dengan halaman login Anda
+                window.location.href = 'home.html';
+            }
+            }
+
+            // Tautan Home
+            $('.nav-link[href="home.html"]').click(function (event) {
+            checkLoginStatus();
+            event.preventDefault(); // Menghentikan navigasi default
+            });
+
+            // Tautan About
+            $('.nav-link[href="about.html"]').click(function (event) {
+            checkLoginStatus();
+            event.preventDefault(); // Menghentikan navigasi default
+            });
+
+            // Rotation Logo
+            $('#logoImage').click(function () {
+                var logo = $(this);
+
+                logo.addClass('rotate');
+
+                var rotationCount = logo.data('rotationCount') || 0;
+                rotationCount++;
+
+                var rotationAngle = 360 * rotationCount;
+
+                logo.animate({ rotation: rotationAngle }, {
+                    step: function (now, fx) {
+                        logo.css('transform', 'rotate(' + now + 'deg)');
+                    },
+                    duration: 500,
+                    complete: function () {
+                        logo.removeClass('rotate').data('rotationCount', rotationCount);
+                    },
+                    easing: 'linear'
+                });
+            });
+
+            $('#inputUsername5').on('input blur', function () {
+                var username = $(this).val();
+                var errorElement = $('#usernameError');
+
+                errorElement.html(username === "" ? "Field Username!" : ($.trim(username) === "" ? "Username cannot be just spaces!" : ""));
+            });
+
+            $('#inputPassword5').on('input', function () {
+                var password = $(this).val();
+                var hasUppercase = /[A-Z]/.test(password);
+                var hasLowercase = /[a-z]/.test(password);
+                var hasNumber = /\d/.test(password);
+
+                var passwordError = (!hasUppercase ? " 1 Uppercase," : "") +
+                                    (!hasLowercase ? " 1 Lowercase," : "") +
+                                    (!hasNumber ? " 1 Number," : "");
+
+                // Menghapus koma terakhir
+                passwordError = passwordError.slice(0, -1);
+
+                var errorElement = $('#passwordError');
+
+                errorElement.html(password === "" ? "Field Password!" : (password.length < 4 || passwordError !== "" ? "Password must be at least 4 characters with:" + passwordError : ""));
+            });
+
+            
+            $('#form-login').submit(function (event) {
+                event.preventDefault();
+
+                // Reset pesan kesalahan sebelum validasi
+                $('#usernameError, #passwordError').html("");
+
+                // Validasi username
+                var username = $.trim($('#inputUsername5').val());
+                var usernameError = username === "" ? "Field Username!" : ($.trim(username) === "" ? "Username cannot be just spaces!" : "");
+                $('#usernameError').html(usernameError);
+
+                // Validasi password
+                var password = $('#inputPassword5').val();
+                var passwordError = "";
+                if (password === "" || password.length < 4) {
+                    passwordError = "Field Password!";
+                } else {
+                    var hasUppercase = /[A-Z]/.test(password);
+                    var hasLowercase = /[a-z]/.test(password);
+                    var hasNumber = /\d/.test(password);
+                    passwordError = (!hasUppercase ? "1 Uppercase, " : "") +
+                    (!hasLowercase ? "1 Lowercase, " : "") +
+                    (!hasNumber ? "1 Number, " : "");
+                    passwordError = passwordError ? "Password must be at least 4 characters with: " + passwordError.trim() : "";
+                }
+                $('#passwordError').html(passwordError);
+
+                // Fetch API berdasarkan validasi username dan password
+                if (!usernameError && !passwordError) {
+                    $.ajax({
+                    url: 'https://dummyjson.com/auth/login',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        username,
+                        password
+                    }),
+                    success: function (data, xhr) {
+                        console.log("Response status:", xhr.status);
+                        console.log("Data from API:", data);
+
+                        if (data && data.token) {
+                        console.log("Login successful. Redirecting...");
+                        isLoggedIn = true;
+                        window.location.href = 'about.html';
+                        } else {
+                        alert("Login failed. Please try again.");
+                        }
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        console.error("Error connecting to the authentication API:", errorThrown);
+                        alert("Error connecting to the authentication API. Please check your username and password.");
+                    }
+                    });
+                }
+            });
+
+            // $('#form-login').submit(function (event) {
+            //     event.preventDefault();
+
+            //     // Reset pesan kesalahan sebelum validasi
+            //     $('#usernameError, #passwordError').html("");
+
+            //     // Validasi username
+            //     var username = $.trim($('#inputUsername5').val());
+            //     var usernameError = username === "" ? "Field Username!" : ($.trim(username) === "" ? "Username cannot be just spaces!" : "");
+            //     $('#usernameError').html(usernameError);
+
+            //     // Validasi password
+            //     var password = $('#inputPassword5').val();
+            //     var passwordError = "";
+            //     if (password === "" || password.length < 4) {
+            //         passwordError = "Field Password!";
+            //     } else {
+            //         var hasUppercase = /[A-Z]/.test(password);
+            //         var hasLowercase = /[a-z]/.test(password);
+            //         var hasNumber = /\d/.test(password);
+            //         passwordError = (!hasUppercase ? "1 Uppercase, " : "") +
+            //                         (!hasLowercase ? "1 Lowercase, " : "") +
+            //                         (!hasNumber ? "1 Number, " : "");
+            //         passwordError = passwordError ? "Password must be at least 4 characters with: " + passwordError.trim() : "";
+            //     }
+            //     $('#passwordError').html(passwordError);
+
+            //     // Fetch API berdasarkan validasi username dan password
+            //     if (!usernameError && !passwordError) {
+            //         $.ajax({
+            //             url: 'https://dummyjson.com/auth/login',
+            //             method: 'POST',
+            //             contentType: 'application/json',
+            //             data: JSON.stringify({ username, password }),
+            //             success: function (data, xhr) {
+            //                 console.log("Response status:", xhr.status);
+            //                 console.log("Data from API:", data);
+
+            //                 if (data && data.token) {
+            //                     console.log("Login successful. Redirecting...");
+            //                     window.location.href = 'about.html';
+            //                 } else {
+            //                     alert("Login failed. Please try again.");
+            //                 }
+            //             },
+            //             error: function (xhr, textStatus, errorThrown) {
+            //                 console.error("Error connecting to the authentication API:", errorThrown);
+            //                 alert("Error connecting to the authentication API. Please check your username and password.");
+            //             }
+            //         });
+            //     }
+            // });
+
+
+            $('#showPasswordCheckbox').change(function () {
+            var passwordInput = $('#inputPassword5');
+                passwordInput.prop('type', function (_, currentType) {
+                    return currentType === 'password' ? 'text' : 'password';
+                });
+            });
+
+            $('#inputUsername5, #inputPassword5').on('keydown keyup', function (event) {
+                $("#capsLockWarning").css("display", event.originalEvent.getModifierState && event.originalEvent.getModifierState("CapsLock") ? "inline" : "none");
+            });
+        });
+    </script>
+</body>
+</html>
