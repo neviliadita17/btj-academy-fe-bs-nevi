@@ -345,61 +345,7 @@
                     });
                 }
             });
-
-            // $('#form-login').submit(function (event) {
-            //     event.preventDefault();
-
-            //     // Reset pesan kesalahan sebelum validasi
-            //     $('#usernameError, #passwordError').html("");
-
-            //     // Validasi username
-            //     var username = $.trim($('#inputUsername5').val());
-            //     var usernameError = username === "" ? "Field Username!" : ($.trim(username) === "" ? "Username cannot be just spaces!" : "");
-            //     $('#usernameError').html(usernameError);
-
-            //     // Validasi password
-            //     var password = $('#inputPassword5').val();
-            //     var passwordError = "";
-            //     if (password === "" || password.length < 4) {
-            //         passwordError = "Field Password!";
-            //     } else {
-            //         var hasUppercase = /[A-Z]/.test(password);
-            //         var hasLowercase = /[a-z]/.test(password);
-            //         var hasNumber = /\d/.test(password);
-            //         passwordError = (!hasUppercase ? "1 Uppercase, " : "") +
-            //                         (!hasLowercase ? "1 Lowercase, " : "") +
-            //                         (!hasNumber ? "1 Number, " : "");
-            //         passwordError = passwordError ? "Password must be at least 4 characters with: " + passwordError.trim() : "";
-            //     }
-            //     $('#passwordError').html(passwordError);
-
-            //     // Fetch API berdasarkan validasi username dan password
-            //     if (!usernameError && !passwordError) {
-            //         $.ajax({
-            //             url: 'https://dummyjson.com/auth/login',
-            //             method: 'POST',
-            //             contentType: 'application/json',
-            //             data: JSON.stringify({ username, password }),
-            //             success: function (data, xhr) {
-            //                 console.log("Response status:", xhr.status);
-            //                 console.log("Data from API:", data);
-
-            //                 if (data && data.token) {
-            //                     console.log("Login successful. Redirecting...");
-            //                     window.location.href = 'about.html';
-            //                 } else {
-            //                     alert("Login failed. Please try again.");
-            //                 }
-            //             },
-            //             error: function (xhr, textStatus, errorThrown) {
-            //                 console.error("Error connecting to the authentication API:", errorThrown);
-            //                 alert("Error connecting to the authentication API. Please check your username and password.");
-            //             }
-            //         });
-            //     }
-            // });
-
-
+            
             $('#showPasswordCheckbox').change(function () {
             var passwordInput = $('#inputPassword5');
                 passwordInput.prop('type', function (_, currentType) {
